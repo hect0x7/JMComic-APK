@@ -38,8 +38,9 @@ def check_apk():
         return
 
     add_output('found_new', 'true')
-    add_output('download_path', 'true')
-    download_new_ver(new_ver, f'/static/apk/{new_ver}.apk')
+    download_path = f'/static/apk/{new_ver}.apk'
+    add_output('download_path', download_path)
+    download_new_ver(new_ver, download_path)
 
 
 if __name__ == '__main__':
