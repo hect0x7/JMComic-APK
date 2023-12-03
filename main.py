@@ -38,6 +38,7 @@ def check_apk():
         return
 
     add_output('found_new', 'true')
+    add_output('download_path', 'true')
     download_new_ver(new_ver, f'/static/apk/{new_ver}.apk')
 
 

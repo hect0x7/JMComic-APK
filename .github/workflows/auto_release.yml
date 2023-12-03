@@ -37,18 +37,16 @@ jobs:
         if: ${{ steps.script.outputs.found_new == 'true'}}
         uses: softprops/action-gh-release@v1
         with:
-          name: 禁漫APK v${{ steps.script.outputs.new_ver }}
+          name: v${{ steps.script.outputs.new_ver }}
           tag_name: ${{ steps.script.outputs.new_ver }}
           draft: false
           files: |
-            ${{ steps.script.outputs.found_new }}.apk
+            ${{ steps.script.outputs.download_path }}.apk
           body: |
-            禁漫APK v${{ steps.script.outputs.new_ver }}
-            你可以直接从GitHub下载，也可以到禁漫官网下载
-
-            禁漫官网下载直链: 
-            1. 18comic.vip${{ steps.script.outputs.download_path }}
-            2. jmcomic1.me${{ steps.script.outputs.download_path }}
+            禁漫APP v${{ steps.script.outputs.new_ver }}
+            你可以直接下载下方的Assets使用，或者禁漫官网下载直链:
+            1. [18comic.vip](https://18comic.vip${{ steps.script.outputs.download_path }})
+            2. [jmcomic1.me](https://jmcomic1.me${{ steps.script.outputs.download_path }})
 
       - name: Commit
         if: ${{ steps.script.outputs.found_new == 'true'}}
