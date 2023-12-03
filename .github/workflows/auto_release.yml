@@ -41,12 +41,12 @@ jobs:
           tag_name: ${{ steps.script.outputs.new_ver }}
           draft: false
           files: |
-            ${{ steps.script.outputs.download_path }}.apk
+            ${{ steps.script.outputs.new_ver }}.apk
           body: |
             禁漫APP v${{ steps.script.outputs.new_ver }}
-            你可以直接下载Assets的`${{ steps.script.outputs.download_path }}.apk`使用，或者从禁漫官网下载:
+            你可以直接下载Assets的`${{ steps.script.outputs.new_ver }}.apk`使用，或者从禁漫官网下载:
             
-            禁漫官网的`${{ steps.script.outputs.download_path }}.apk`下载链接：
+            禁漫官网的`${{ steps.script.outputs.new_ver }}.apk`下载链接：
             1. [18comic.vip](https://18comic.vip${{ steps.script.outputs.download_path }})
             2. [jmcomic1.me](https://jmcomic1.me${{ steps.script.outputs.download_path }})
 
