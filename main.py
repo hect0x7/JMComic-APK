@@ -1,18 +1,14 @@
 import os
 import re
 
-from jmcomic import JmOption, JmHtmlClient, PatternTool, \
+from jmcomic import create_option, JmHtmlClient, PatternTool, \
     file_exists, write_text, read_text, \
-    ProxyBuilder, save_resp_content
+    save_resp_content
 
 apk_version_txt = './APK_VERSION.txt'
 is_dev: bool = file_exists('.idea')
 cur_ver: str = read_text(apk_version_txt).strip()
-# noinspection PyTypeChecker
-cl: JmHtmlClient = (JmOption
-                    .default()
-                    .new_jm_client(impl=JmHtmlClient, proxies=ProxyBuilder.clash_proxy() if is_dev else None)
-                    )
+cl: JmHtmlClient = create_option('op.yml').new_jm_client()
 
 
 def add_output(k, v):
