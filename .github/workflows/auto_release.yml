@@ -1,0 +1,64 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Auto Edit and Release
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 17 * * *'
+
+permissions:
+  contents: write
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependency
+        run: |
+          python -m pip install --upgrade pip
+          pip install jmcomic
+
+      - name: Run Script
+        id: script
+        run: |
+          python main.py
+
+      - name: Release
+        if: ${{ steps.script.outputs.found_new == 'true'}}
+        uses: softprops/action-gh-release@v1
+        with:
+          name: 禁漫APK v${{ steps.script.outputs.new_ver }}
+          tag_name: ${{ steps.script.outputs.new_ver }}
+          draft: false
+          files: |
+            ${{ steps.script.outputs.found_new }}.apk
+          body: |
+            禁漫APK v${{ steps.script.outputs.new_ver }}
+            你可以直接从GitHub下载，也可以到禁漫官网下载
+
+            禁漫官网下载直链: 
+            1. 18comic.vip${{ steps.script.outputs.download_path }}
+            2. jmcomic1.me${{ steps.script.outputs.download_path }}
+
+      - name: Commit
+        if: ${{ steps.script.outputs.found_new == 'true'}}
+        run: |
+          # Extract the version number from the previous step
+          version=${{ steps.script.outputs.new_ver }}
+          git config --global user.email "93357912+hect0x7@users.noreply.github.com"
+          git config --global user.name "hect0x7"
+          git tag -a "v$version" -m "Version $version"
+          git add ./APK_VERSION.txt
+          git commit -m "update APK_VERSION.txt"
+          git push
+          echo "finished"
