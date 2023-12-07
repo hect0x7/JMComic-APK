@@ -28,9 +28,11 @@ def download_new_ver(new_ver, download_path):
 def check_apk():
     resp = cl.get_jm_html('/stray/?utm_source=18comic')
 
-    apk_version_pattern = re.compile(r'a href="/static/apk/(.*?).apk"')
+    apk_version_pattern = re.compile(r'a href="(/static/apk/(.*?).apk)"')
 
-    new_ver = PatternTool.require_match(resp.text, apk_version_pattern, '未匹配上apk下载路径')
+    match = PatternTool.require_match(resp.text, apk_version_pattern, '未匹配上apk下载路径', None)
+    
+    download_path, new_ver = match[1], match[2]
     add_output('new_ver', new_ver)
 
     if new_ver <= cur_ver:
@@ -38,7 +40,6 @@ def check_apk():
         return
 
     add_output('found_new', 'true')
-    download_path = f'/static/apk/{new_ver}.apk'
     add_output('download_path', download_path)
     download_new_ver(new_ver, download_path)
 
