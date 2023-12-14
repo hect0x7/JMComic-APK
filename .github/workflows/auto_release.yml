@@ -6,7 +6,7 @@ name: Check JMComic Android APK
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '0 */2 * * *'
 
 permissions:
   contents: write
