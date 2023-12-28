@@ -27,8 +27,8 @@ def download_new_ver(new_ver, download_path):
 
 
 def check_apk():
-    download_path, new_ver = fetch_apk_ver_and_download_path()
-    # download_path, new_ver = fetch_apk_ver_and_download_path2()
+    # download_path, new_ver = fetch_apk_ver_and_download_path()
+    download_path, new_ver = fetch_apk_ver_and_download_path2()
     add_output('new_ver', new_ver)
 
     if new_ver <= cur_ver:
@@ -53,7 +53,7 @@ def fetch_apk_ver_and_download_path2():
     resp = app.setting()
     data = resp.model_data
 
-    return data.version, data.download_url
+    return data.download_url, data.version
 
 
 if __name__ == '__main__':
