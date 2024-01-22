@@ -38,7 +38,7 @@ def check_apk():
 
     add_output('found_new', 'true')
     add_output('download_path', download_path)
-    add_output('desc', version_info)
+    add_output('desc', version_info.replace('\n', '<p>'))
     download_new_ver(new_ver, download_path)
 
 
