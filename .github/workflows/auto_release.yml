@@ -50,7 +50,7 @@ jobs:
             2. [jmcomic1.me](https://jmcomic1.me${{ steps.script.outputs.download_path }})
             
             `${{ steps.script.outputs.new_ver }}.apk`的更新信息：
-            {{ steps.script.outputs.desc }}
+            ${{ steps.script.outputs.desc }}
 
       - name: Commit
         if: ${{ steps.script.outputs.found_new == 'true'}}
