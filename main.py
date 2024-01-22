@@ -29,7 +29,7 @@ def download_new_ver(new_ver, download_path):
 
 def check_apk():
     # new_ver, download_path = fetch_apk_ver_and_download_path()
-    new_ver, download_path = fetch_apk_ver_and_download_path2()
+    new_ver, download_path, version_info = fetch_apk_ver_and_download_path2()
     add_output('new_ver', new_ver)
 
     if new_ver <= cur_ver:
@@ -38,6 +38,7 @@ def check_apk():
 
     add_output('found_new', 'true')
     add_output('download_path', download_path)
+    add_output('desc', version_info)
     download_new_ver(new_ver, download_path)
 
 
@@ -53,7 +54,7 @@ def fetch_apk_ver_and_download_path2():
     resp = api_cl.setting()
     data = resp.model_data
 
-    return data.version, data.download_url
+    return data.version, data.download_url, data.version_info
 
 
 if __name__ == '__main__':
