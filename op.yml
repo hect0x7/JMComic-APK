@@ -1,5 +1,4 @@
 client:
   domain:
     html: [ jmcomic1.me, jmcomic.me ]
-    api: www.jmapinode.biz
 
