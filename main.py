@@ -29,7 +29,7 @@ def download_new_ver(new_ver, download_path):
 
 def check_apk():
     # new_ver, download_path = fetch_apk_ver_and_download_path()
-    new_ver, download_path, version_info = fetch_apk_ver_and_download_path2()
+    new_ver, download_path, desc = fetch_apk_info_via_api()
     add_output('new_ver', new_ver)
 
     if new_ver <= cur_ver:
@@ -38,11 +38,11 @@ def check_apk():
 
     add_output('found_new', 'true')
     add_output('download_path', download_path)
-    add_output('desc', version_info.replace('\n', '<p>'))
+    add_output('desc', desc.replace('\n', '<p>'))
     download_new_ver(new_ver, download_path)
 
 
-def fetch_apk_ver_and_download_path():
+def fetch_apk_info_via_html():
     resp = html_cl.get_jm_html('/stray/?utm_source=18comic')
     apk_version_pattern = re.compile(r'a href="(/static/apk/(.*?).apk)"')
     match = PatternTool.require_match(resp.text, apk_version_pattern, '未匹配上apk下载路径', None)
@@ -50,11 +50,12 @@ def fetch_apk_ver_and_download_path():
     return new_ver, download_path
 
 
-def fetch_apk_ver_and_download_path2():
+def fetch_apk_info_via_api():
     resp = api_cl.setting()
     data = resp.model_data
 
-    return data.version, data.download_url, data.version_info
+    version = data.version
+    return version, f'/static/apk/{version}.apk', data.version_info
 
 
 if __name__ == '__main__':
