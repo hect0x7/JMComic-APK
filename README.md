@@ -13,7 +13,11 @@
 
 `jmcomic`库的链接如下（**引流：下面这个项目还可以帮你一键批量下载禁漫本子**）
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python&theme=transparent)](https://github.com/hect0x7/JMComic-Crawler-Python)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python" />
+  <img alt="Repo Card" src="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python" />
+</picture>
 
 Star历史图：
 
