@@ -47,8 +47,8 @@ jobs:
             你可以直接下载Assets的`${{ steps.script.outputs.new_ver }}.apk`使用，或者从禁漫官网下载:
             
             禁漫官网的`${{ steps.script.outputs.new_ver }}.apk`下载链接：
-            1. [https://18comic.vip${{ steps.script.outputs.download_path }}](https://18comic.vip${{ steps.script.outputs.download_path }})
-            2. [https://jmcomic1.me${{ steps.script.outputs.download_path }}](https://jmcomic1.me${{ steps.script.outputs.download_path }})
+            1. [${{ steps.script.outputs.download_path }}](${{ steps.script.outputs.download_path }})
+            2. [${{ steps.script.outputs.download_path }}](${{ steps.script.outputs.download_path }})
             3. [https://18comic.vip/stray](https://18comic.vip/stray/)（发布页）
             
             `${{ steps.script.outputs.new_ver }}.apk`的更新信息：
