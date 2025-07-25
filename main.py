@@ -3,11 +3,12 @@ import re
 
 from jmcomic import create_option, JmHtmlClient, JmApiClient, \
     PatternTool, file_exists, write_text, read_text, \
-    save_resp_content
+    save_resp_content, JmModuleConfig
 
 apk_version_txt = './APK_VERSION.txt'
 is_dev: bool = file_exists('.idea')
 cur_ver: str = read_text(apk_version_txt).strip()
+JmModuleConfig.FLAG_API_CLIENT_REQUIRE_COOKIES = False
 op = create_option('op.yml')
 html_cl: JmHtmlClient = op.new_jm_client(impl='html')
 api_cl: JmApiClient = op.new_jm_client(impl='api')
@@ -54,8 +55,8 @@ def fetch_apk_info_via_api():
     resp = api_cl.setting()
     data = resp.model_data
 
-    version = data.version
-    return version, f'/static/apk/{version}.apk', data.version_info
+    version = data.jm3_version
+    return version, data.download_url, data.jm3_version_info
 
 
 if __name__ == '__main__':
