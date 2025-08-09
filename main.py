@@ -55,8 +55,8 @@ def fetch_apk_info_via_api():
     resp = api_cl.setting()
     data = resp.model_data
 
-    version = data.jm3_version
-    return version, data.download_url, data.jm3_version_info
+    version = data.version
+    return version, f'/static/apk/{version}.apk', data.version_info
 
 
 if __name__ == '__main__':
