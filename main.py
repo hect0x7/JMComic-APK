@@ -1,9 +1,10 @@
+import json
 import os
 import re
 
 from jmcomic import create_option, JmHtmlClient, JmApiClient, \
     PatternTool, file_exists, write_text, read_text, \
-    save_resp_content, JmModuleConfig
+    save_resp_content, JmModuleConfig, JmcomicText, jm_log
 
 apk_version_txt = './APK_VERSION.txt'
 is_dev: bool = file_exists('.idea')
@@ -15,10 +16,11 @@ api_cl: JmApiClient = op.new_jm_client(impl='api')
 
 
 def add_output(k, v):
+    cmd = f'echo "{k}={v}" >> $GITHUB_OUTPUT'
     if is_dev:
+        print(cmd)
         return
 
-    cmd = f'echo "{k}={v}" >> $GITHUB_OUTPUT'
     print(f'{cmd}: {os.system(cmd)}')
 
 
@@ -38,7 +40,8 @@ def check_apk():
         return
 
     add_output('found_new', 'true')
-    add_output('download_path', download_path)
+    add_output('download_path1', f'{JmModuleConfig.PROT}18comic.vip{download_path}')
+    add_output('download_path2', f'{JmModuleConfig.PROT}jmcomic.me{download_path}')
     add_output('desc', desc.replace('\n', '<p>'))
     download_new_ver(new_ver, download_path)
 
@@ -51,12 +54,22 @@ def fetch_apk_info_via_html():
     return new_ver, download_path
 
 
+def get_download_path(url):
+    try:
+        domain = JmcomicText.parse_to_jm_domain(url)
+        return url.replace(JmModuleConfig.PROT, '').replace(domain, '')
+    except Exception as e:
+        jm_log('get_download_path', f'{e}: [{url}]')
+        return url.replace(JmModuleConfig.PROT, '')
+
+
 def fetch_apk_info_via_api():
     resp = api_cl.setting()
+    jm_log('apk.setting', json.dumps(resp.res_data, indent=2, ensure_ascii=False))
     data = resp.model_data
 
     version = data.jm3_version
-    return version, data.download_url, data.jm3_version_info
+    return version, get_download_path(data.jm3_download_url), data.jm3_version_info
 
 
 if __name__ == '__main__':
