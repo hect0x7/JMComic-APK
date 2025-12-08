@@ -58,7 +58,7 @@ def check_apk():
     add_output('found_new', 'true')
     add_output('download_path1', f'{JmModuleConfig.PROT}18comic.vip{download_path}')
     add_output('download_path2', f'{JmModuleConfig.PROT}jmcomic.me{download_path}')
-    add_output('desc', desc.replace('\n\n', '\n').replace('\n', '<p>'))
+    add_output('desc', desc.replace('\r\n', '\n').replace('\n', '<p>'))
     download_new_ver(new_ver, download_path)
 
 
