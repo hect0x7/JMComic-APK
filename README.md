@@ -10,6 +10,8 @@
 
 </div>
 
+![NotebookLM 一图流](images/introduce_nblm.png)
+
 ## 项目介绍
 
 使用GitHub Actions定时检查禁漫APK是否有更新，如果有，就下载一份保存到Release中。
@@ -25,13 +27,12 @@
 
 <a href="https://github.com/hect0x7/JMComic-Crawler-Python">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python.svg" />
-    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg?t=1" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python.svg?t=1" />
+    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg?t=1" />
   </picture>
 </a>
 
-![NotebookLM 一图流](images/introduce_nblm.png)
 
 
 ## Star历史图
