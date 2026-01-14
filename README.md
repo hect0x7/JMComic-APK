@@ -25,9 +25,9 @@
 
 <a href="https://github.com/hect0x7/JMComic-Crawler-Python">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python&theme=radical" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python" />
-    <img alt="Repo Card" src="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python.svg" />
+    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg" />
   </picture>
 </a>
 
