@@ -19,9 +19,9 @@
 
 ## 相关项目
 
-本项目的代码基于`jmcomic`库，这是我写的一个pip库，支持用python代码访问禁漫天堂。
+本项目的代码基于[`jmcomic`](https://github.com/hect0x7/JMComic-Crawler-Python)库，这是我写的一个pip库，支持用python代码访问禁漫天堂。
 
-`jmcomic`库的链接如下（**引流：下面这个项目还可以帮你一键批量下载禁漫本子**）
+> 引流：[jmcomic](https://github.com/hect0x7/JMComic-Crawler-Python) 还可以帮你一键批量下载禁漫本子
 
 <a href="https://github.com/hect0x7/JMComic-Crawler-Python">
   <picture>
@@ -30,6 +30,9 @@
     <img alt="Repo Card" src="https://github-readme-stats.vercel.app/api/pin/?username=hect0x7&repo=JMComic-Crawler-Python" />
   </picture>
 </a>
+
+![NotebookLM 一图流](images/introduce_nblm.png)
+
 
 ## Star历史图
 
