@@ -10,7 +10,7 @@
 
 </div>
 
-![NotebookLM 一图流](images/introduce_nblm.png)
+![一图流](images/introduce.jpg)
 
 ## 项目介绍
 
