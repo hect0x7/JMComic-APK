@@ -10,7 +10,7 @@
 
 </div>
 
-![一图流](images/introduce.jpg)
+![一图流](images/introduction.jpg)
 
 ## 项目介绍
 
