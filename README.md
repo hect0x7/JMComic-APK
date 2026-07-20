@@ -39,9 +39,9 @@
 
 <a href="https://github.com/hect0x7/JMComic-Crawler-Python">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg?t=1" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python.svg?t=1" />
-    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-JMComic-Crawler-Python-dark.svg?t=1" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-JMComic-Crawler-Python-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-JMComic-Crawler-Python.svg" />
+    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-JMComic-Crawler-Python.svg" />
   </picture>
 </a>
 
@@ -53,9 +53,9 @@
 
 <a href="https://github.com/hect0x7/plugin-jm-server">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-plugin-jm-server-dark.svg?t=1" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-plugin-jm-server.svg?t=1" />
-    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-plugin-jm-server-dark.svg?t=1" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-plugin-jm-server-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-plugin-jm-server.svg" />
+    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-plugin-jm-server.svg" />
   </picture>
 </a>
 
@@ -68,8 +68,8 @@
 
 <a href="https://github.com/hect0x7/jmcomic-ai">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-jmcomic-ai-dark.svg?t=1" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-jmcomic-ai.svg?t=1" />
-    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/refs/heads/master/profile/pin-jmcomic-ai-dark.svg?t=1" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-jmcomic-ai-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-jmcomic-ai.svg" />
+    <img alt="Repo Card" src="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/pin-jmcomic-ai.svg" />
   </picture>
 </a>
