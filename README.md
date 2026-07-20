@@ -23,11 +23,12 @@
 
 <a href="https://github.com/hect0x7/JMComic-Crawler-Python">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hect0x7/JMComic-Crawler-Python%2Chect0x7/JMComic-APK&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hect0x7/JMComic-Crawler-Python%2Chect0x7/JMComic-APK&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hect0x7/JMComic-Crawler-Python%2Chect0x7/JMComic-APK&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/star-history-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/star-history.svg" />
+    <img alt="Star History Chart" src="https://raw.githubusercontent.com/hect0x7/hect0x7/output/profile/star-history.svg" />
   </picture>
 </a>
+
 
 
 ## 相关项目推荐
