@@ -53,6 +53,24 @@ jobs:
             2. [${{ steps.script.outputs.download_path2 }}](${{ steps.script.outputs.download_path2 }})
             3. [https://18comic.vip/stray](https://18comic.vip/stray/)（发布页）
             
+            ---
+
+            ### 🍎 苹果 (iOS) 用户安装与使用指南
+
+            禁漫在 iOS 设备上通过 **Safari 描述文件 (WebClip)** 形式运行：
+
+            1. **链接入口**（请务必使用 **Safari 浏览器** 打开）：
+               - 官方安装页：[https://18comic.vip/ios_app/index.php](https://18comic.vip/ios_app/index.php)
+               - 备用镜像页：[https://jmcomic1.me/ios_app/index.php](https://jmcomic1.me/ios_app/index.php)
+            2. **安装步骤**：
+               - 打开上述网页，点击「立即安装」允许下载描述文件；
+               - 打开 iPhone「设置」→「已下载描述文件」→ 选择「JMComic3」完成信任与安装；
+               - 安装后桌面将生成独立应用图标。
+            3. **免描述文件简易方案**：
+               - 直接在 Safari 打开官网网页版，点击底部分享按钮，选择「添加到主屏幕」即可。
+
+            ---
+
             `${{ steps.script.outputs.new_ver }}.apk` 的官方更新信息：
             
             > ${{ steps.script.outputs.desc }}

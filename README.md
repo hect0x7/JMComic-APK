@@ -7,6 +7,7 @@
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/hect0x7)
 [![GitHub all download](https://img.shields.io/github/downloads/hect0x7/JMComic-APK/total?color=orange&label=github%20downloads)](https://github.com/hect0x7/JMComic-APK/releases/latest)
 [![Download](https://img.shields.io/badge/禁漫APK-去下载-brightgreen?logo=android&logoColor=white)](https://github.com/hect0x7/JMComic-APK/releases/latest)
+[![iOS](https://img.shields.io/badge/苹果iOS-去安装-black?logo=apple&logoColor=white)](https://18comic.vip/ios_app/index.php)
 [![GitHub latest releases](https://img.shields.io/github/v/release/hect0x7/JMComic-APK?color=blue&label=release)](https://github.com/hect0x7/JMComic-APK/releases/latest)
 
 </div>
@@ -18,6 +19,8 @@
 使用GitHub Actions定时检查禁漫APK是否有更新，如果有，就下载一份保存到Release中。
 
 [✨✨✨点我去APK下载界面✨✨✨](https://github.com/hect0x7/JMComic-APK/releases/latest)
+
+> 苹果用户请使用 Safari 打开 [iOS 安装页](https://18comic.vip/ios_app/index.php)，具体说明详见 Release。
 
 
 ## Star历史图
