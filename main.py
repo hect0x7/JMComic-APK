@@ -3,8 +3,9 @@ import os
 import re
 
 from jmcomic import create_option, JmHtmlClient, JmApiClient, \
-    PatternTool, file_exists, write_text, read_text, \
-    save_resp_content, JmModuleConfig, JmcomicText, jm_log
+    PatternTool, JmModuleConfig, JmcomicText, jm_log
+
+from common import file_exists, read_text, write_text, save_resp_content
 
 apk_version_txt = './APK_VERSION.txt'
 is_dev: bool = file_exists('.idea')
@@ -14,22 +15,6 @@ op = create_option('op.yml')
 html_cl: JmHtmlClient = op.new_jm_client(impl='html')
 api_cl: JmApiClient = op.new_jm_client(impl='api')
 
-
-def compare_versions(v1: str, v2: str) -> int:
-    parts1 = list(map(int, v1.split(".")))
-    parts2 = list(map(int, v2.split(".")))
-
-    # 补齐长度
-    length = max(len(parts1), len(parts2))
-    parts1 += [0] * (length - len(parts1))
-    parts2 += [0] * (length - len(parts2))
-
-    if parts1 > parts2:
-        return 1  # v1 大
-    elif parts1 < parts2:
-        return -1  # v2 大
-    else:
-        return 0  # 相等
 
 def add_output(k, v):
     cmd = f'echo "{k}={v}" >> $GITHUB_OUTPUT'
@@ -51,7 +36,7 @@ def check_apk():
     new_ver, download_path, desc = fetch_apk_info_via_api()
     add_output('new_ver', new_ver)
 
-    if compare_versions(new_ver, cur_ver) < 1:
+    if JmcomicText.compare_versions(new_ver, cur_ver) < 1:
         add_output('found_new', 'false')
         return
 
